@@ -1,17 +1,24 @@
 
-import { Request, Response, Router, Express } from "express";
-
+import { Request, Response, Router } from "express";
 
 // Init shared
 const router = Router();
 
-/******************************************************************************
- *                      Get All Users - "GET /api/users/all"
- ******************************************************************************/
 
-router.get("/all", async (req: Request, res: Response) => {
+
+router.get("/", main);
+
+
+
+
+
+
+
+
+async function main(req: Request, res: Response) {
     console.log(req);
-});
+    res.send("OK");
+}
 
 /******************************************************************************
  *                                     Export
