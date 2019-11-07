@@ -5,10 +5,9 @@ import { Request, Response, Router } from "express";
 const router = Router();
 
 
+router.get("", main);
 
-router.get("/", main);
-
-
+router.get("login", login);
 
 
 
@@ -16,6 +15,9 @@ router.get("/", main);
 
 
 async function main(req: Request, res: Response) {
+    res.render("index");
+}
+async function login(req: Request, res: Response) {
     res.render("index");
 }
 
