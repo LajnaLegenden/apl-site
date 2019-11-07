@@ -5,6 +5,7 @@
   "main": "dist/app.js",
   "scripts": {
     "start": "tsc && node dist/app.js",
+    "dev": "tsc && ts-node-dev dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npx npm-force-resolutions"
   },
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@types/express": "^4.17.2",
     "@types/node": "^12.12.6",
+    "backend-tslint-rules": "^1.14.0",
     "npm-force-resolutions": "0.0.3",
     "tslint": "^5.20.0",
     "typescript": "^3.6.4"
