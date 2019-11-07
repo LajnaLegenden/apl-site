@@ -1,13 +1,7 @@
-import express from "express";
+import app from "./Server";
 
-const app = express();
-const port = 3000;
-app.get("/", (req, res) => {
-    res.send("The sedulous hyena ate the antelope!");
-});
-app.listen(port, (err) => {
-    if (err) {
-        return console.error(err);
-    }
-    return console.log(`server is listening on ${port}`);
+// Start the server
+const port = Number(process.env.PORT || 3000);
+app.listen(port, () => {
+    console.log(port);
 });

@@ -14,14 +14,15 @@
   "keywords": [
     "moneymaker"
   ],
-  "author": "Lajna,Mattesick,NTIT4",
+  "author": "Lajna,Mattesick",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/LajnaLegenden/apl-site/issues"
   },
   "homepage": "https://github.com/LajnaLegenden/apl-site#readme",
   "devDependencies": {
-    "@types/express": "^4.17.1",
+    "@types/express": "^4.17.2",
+    "@types/node": "^12.12.6",
     "tslint": "^5.20.0",
     "typescript": "^3.6.4"
   },
