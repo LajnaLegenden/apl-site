@@ -1,8 +1,12 @@
 import app from "./Server";
 
+
 import setUpHBS from "./modules/handlebarsSetup";
+import router from "./routes/Default";
+
 
 setUpHBS(app);
+app.use(router);
 
 
 // Start the server

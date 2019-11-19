@@ -6,7 +6,12 @@
     "jsRules": {},
     "rules": {
         "no-console": false,
-        "no-consecutive-blank-lines": false
+        "no-consecutive-blank-lines": false,
+        "quotes": [
+            2,
+            "single",
+            "avoid-escape"
+        ]
     },
     "rulesDirectory": []
 }
