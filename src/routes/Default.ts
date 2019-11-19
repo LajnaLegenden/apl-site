@@ -10,7 +10,6 @@ router.get("/", landingPage);
 // Funtion for routes
 
 async function landingPage(req: Request, res: Response) {
-    logger.log(req);
     res.render("index");
 }
 

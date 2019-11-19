@@ -2,7 +2,6 @@
 import * as dotenv from "dotenv";
 dotenv.config();
 
-import { addListener } from "cluster";
 import setUpHBS from "./modules/handlebarsSetup";
 import logger from "./modules/logger";
 import router from "./routes/Default";
