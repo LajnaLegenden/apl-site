@@ -5,9 +5,10 @@
   "main": "dist/app.js",
   "scripts": {
     "start": "tsc && node dist/app.js",
-    "dev": "tsc && ts-node-dev dist/app.js",
+    "dev": "tsc &&npm run copyNonTS && ts-node-dev dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "npx npm-force-resolutions"
+    "preinstall": "npx npm-force-resolutions",
+    "copyNonTS": "rm -rf dist/views && mkdir dist/views && cp src/views/* dist/views/ -r && node-sass src/public/scss/ -o dist/public/css/"
   },
   "repository": {
     "type": "git",
@@ -23,19 +24,23 @@
   },
   "homepage": "https://github.com/LajnaLegenden/apl-site#readme",
   "devDependencies": {
+    "@types/copyfiles": "^2.1.1",
     "@types/express": "^4.17.2",
     "@types/node": "^12.12.6",
     "backend-tslint-rules": "^1.14.0",
+    "copyfiles": "^2.1.1",
     "npm-force-resolutions": "0.0.3",
     "tslint": "^5.20.0",
     "typescript": "^3.6.4"
   },
   "dependencies": {
+    "@types/dotenv": "^8.2.0",
     "@types/handlebars": "^4.1.0",
     "@types/hbs": "^4.0.1",
     "@types/shelljs": "^0.8.6",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "handlebars": "^4.4.5",
+    "handlebars": "^4.5.3",
     "hbs": "^4.0.6",
     "shelljs": "^0.8.3"
   },
