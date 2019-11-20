@@ -1,11 +1,12 @@
 import { Request, Response, Router } from "express";
 import logger from "../modules/logger";
+import login from "../modules/login";
 // Init shared
 const router = Router();
 
 // Routes
 
-router.get("/", landingPage);
+router.get("/", login, landingPage);
 
 // Funtion for routes
 
