@@ -4,11 +4,11 @@
   "description": "APLSITE THAT MAKES HELLA CHAS",
   "main": "dist/app.js",
   "scripts": {
-    "start": "tsc &&npm run copyNonTS && node dist/app.js",
+    "start": "tsc && node dist/app.js",
     "dev": "tsc &&npm run copyNonTS && ts-node-dev dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npx npm-force-resolutions",
-    "copyNonTS": "rm -rf dist/views && mkdir dist/views && cp src/views/* dist/views/ -r"
+    "copyNonTS": "rm -rf dist/views && mkdir dist/views && cp src/views/* dist/views/ -r && node-sass src/public/scss/ -o dist/public/css/"
   },
   "repository": {
     "type": "git",

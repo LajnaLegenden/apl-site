@@ -7,7 +7,7 @@ function setUpHbs(app: express.Application) {
     // Load partials from the /views/partials dir
     hbs.registerPartials(__dirname + "/views/partials");
 
-    app.set('views', 'dist/views');
+    app.set("views", "dist/views");
 }
 
 export default setUpHbs;

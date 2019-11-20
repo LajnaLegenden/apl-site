@@ -11,6 +11,7 @@ router.get("/", landingPage);
 
 async function landingPage(req: Request, res: Response) {
     res.render("index");
+    logger.log("Tootot");
 }
 
 // Export router
