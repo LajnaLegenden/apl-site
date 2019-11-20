@@ -9,7 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npx npm-force-resolutions",
     "copyNonTS": "rm -rf dist/views && mkdir dist/views && cp src/views/* dist/views/ -r",
-    "scssCompile": "node-sass src/public/scss/ -o dist/public/css/"
+    "scssCompile": "node-sass src/public/scss/ -o dist/public/css/",
+    "copyNonTSW": "install.bat && npm start"
   },
   "repository": {
     "type": "git",
