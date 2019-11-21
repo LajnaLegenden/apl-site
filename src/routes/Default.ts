@@ -13,6 +13,7 @@ router.get("/", landingPage);
 async function landingPage(req: Request, res: Response) {
     res.render("index", { layout: "layout/default" });
     logger.log("Tootot");
+    logger.log(__dirname)
 }
 
 // Export router

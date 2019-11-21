@@ -18,7 +18,8 @@ setUpHBS(app);
 app.use(router);
 
 // Publis shit
-app.use(express.static(__dirname + "/dist/public"));
+logger.log(__dirname);
+app.use(express.static(__dirname + "/public"));
 
 // Setup cookieparser, bodyparser, express session, and passport
 app.use(cookieParser());
