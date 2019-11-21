@@ -53,7 +53,8 @@ class Logger {
         if (this.isProdution) {
             // this.logToFile(args);
         } else {
-            console.log(level, time, [args]);
+            // asd;
+            console.log(level, time, args.toString());
         }
     }
 

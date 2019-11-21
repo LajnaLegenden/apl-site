@@ -5,12 +5,15 @@
   "main": "dist/app.js",
   "scripts": {
     "start": "tsc && node dist/app.js",
-    "dev": "tsc &&npm run copyNonTS && ts-node-dev dist/app.js",
+    "dev": "tsc && tsc-watch --onSuccess 'npm run devExec' --onFailure 'echo Beep! Compilation Failed' --compiler typescript/bin/tsc",
+    "devW": "tsc && tsc-watch --onSuccess 'npm run devExecW' --onFailure 'echo Beep! Compilation Failed' --compiler typescript/bin/tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npx npm-force-resolutions",
     "copyNonTS": "rm -rf dist/views && mkdir dist/views && cp src/views/* dist/views/ -r",
     "scssCompile": "node-sass src/public/scss/ -o dist/public/css/",
-    "copyNonTSW": "install.bat && npm start"
+    "copyNonTSW": "install.bat && npm start",
+    "devExec": "npm run copyNonTS && node ./dist/app.js",
+    "devExecW": "npm run copyNonTSW && node ./dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -38,6 +41,7 @@
     "@types/passport-local": "^1.0.33",
     "backend-tslint-rules": "^1.14.0",
     "npm-force-resolutions": "0.0.3",
+    "tsc-watch": "^4.0.0",
     "tslint": "^5.20.0",
     "typescript": "^3.6.4"
   },
