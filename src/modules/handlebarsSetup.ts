@@ -1,5 +1,6 @@
 import * as express from "express";
 import hbs from "hbs";
+import logger from "./logger";
 
 function setUpHbs(app: express.Application) {
     // Use hbs as view engine

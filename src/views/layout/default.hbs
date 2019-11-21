@@ -7,18 +7,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{!-- Bootstrap and font awesome --}}
+    {{!-- SemanticUI and font awesome --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/semanticUI/semantic.min.css">
     <link rel="stylesheet" href="/public/css/style.css">
 </head>
 
 <body>
-    {{>nav}}
+    {{!--  {{>nav}} --}}
     {{{body}}}
+
+    <script src="/public/js/jquery/jquery.min.js"></script>
+    <script src="/public/lib/semanticUI/semantic.min.css"></script>
 </body>
-<script src="/public/js/jquery/jquery.min.js"></script>
-<script src="/public/js/popper/popper.min.js" defer></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" defer></script>
 
 </html>

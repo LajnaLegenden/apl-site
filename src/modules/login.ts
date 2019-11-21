@@ -1,5 +1,4 @@
-
-import passport from "passport";
+/* import passport from "passport";
 import LocalStrategy from "passport-local";
 import logger from "./logger";
 
@@ -20,5 +19,4 @@ passport.use(new Strat((username, password, done) => {
     }
 }));
 
-
-export default passport;
+ */

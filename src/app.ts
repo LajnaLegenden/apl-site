@@ -17,10 +17,13 @@ import app from "./Server";
 setUpHBS(app);
 app.use(router);
 
+// Publis shit
+app.use(express.static(__dirname + "/dist/public"));
+
 // Setup cookieparser, bodyparser, express session, and passport
 app.use(cookieParser());
 app.use(bodyParser());
-app.use(session({ secret: process.env.COOKIESECRET }));
+app.use(session({ secret: process.env.COOKIESECRET || "thisissosecure" }));
 app.use(passport.initialize());
 app.use(passport.session());
 // Start the server
